@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My News App</title>
+    <link rel="shortcut icon" href="./favicon/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex container navbar">
+            <a href="#" class="logo">
+                <img src="./favicon/android-chrome-192x192.png" alt="Company Logo">
+            </a>
+            <div>
+                <ul class="flex nav-item">
+                    <li class="hover-link" onclick="selectNavItem('ipl')">Ipl</li>
+                    <li class="hover-link" onclick="selectNavItem('finance')">Finance</li>
+                    <li class="hover-link" onclick="selectNavItem('international')">International</li>
+                    <select class="select-captagory" onchange="changeHandler(this)">
+                        <option value="general" selected>general</option>
+                        <option value="science">Science</option>
+                        <option value="technology">technology</option>
+                        <option value="sports">sports</option>
+                        <option value="business">business</option>
+                        <option value="entertainment">entertainment</option>
+                        <option value="health">health</option>
+                    </select>
+                </ul>
+                <i class="fa-solid fa-bars-staggered nav-icon"></i>
+            </div>
+            
+            <div class="flex Search">
+                <input type="text" class="search-input" placeholder="e.g Science">
+                <button class="search-button">Search</button>
+            </div>
+            <div class="error">Enter Valid Input</div>
+        </nav>
+        
+        <div class="manu-icon">
+            <li onclick="selectNavItem('ipl')">Ipl </li>
+            <li onclick="selectNavItem('finance')">Finance</li>
+            <li onclick="selectNavItem('science')">science</li>
+            <li onclick="selectNavItem('sports')">sports</li>
+            <li onclick="selectNavItem('international')">International</li>
+            <li onclick="selectNavItem('technology')">technology</li>
+            <li onclick="selectNavItem('business')">business</li>
+            <li onclick="selectNavItem('entertainment')">entertainment</li>
+            <li onclick="selectNavItem('health')">health</li>
+            <div class="hide-manu-bar">
+                <input type="text" class="search-input" placeholder="e.g Science">
+                <button class="search-button">Search</button>
+            </div>
+            <span class="show-error">
+                Enter Valid Input
+            </span>
+        </div>
+    </header>
+    
+    <main>
+        <div class="card-container container flex">
+        </div>
+    </main>
+
+    
+    
+    <!-- loader  -->
+    <div class="wrapper">
+        
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+    
+    
+    <!-- data is not found  -->
+    <div class="not-found">
+        <p>
+            Data Not Found
+        </p>
+        <img src="./Accest/android-chrome-512x512.png" alt="">
+    </div>
+    
+    <template id="card-template">
+        <div class="card">
+            <div class="card-header">
+                <img src="" alt="" id="card-img">
+            </div>
+            <div class="card-content">
+                <h3 class="title" id="title"></h3>
+                <h6 class="date"></h6>
+                <p class="description"></p>
+            </div>
+        </div>
+    </template>
+
+
+    
+    
+    <script src="./script.js" ></script>
+</body>
+
+</html>

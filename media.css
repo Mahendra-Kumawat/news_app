@@ -1,0 +1,21 @@
+@media screen and (max-width:880px) {
+    .nav-item{
+        display: none;
+    }
+    .Search{
+        display: none;
+    }
+    .nav-icon{
+        display: block;
+        font-size: 25px;
+    }
+    .error{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:880px) {
+    .manu-icon{
+        display: none;
+    }
+}
