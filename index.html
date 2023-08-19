@@ -21,10 +21,10 @@
             </a>
             <div>
                 <ul class="flex nav-item">
-                    <li class="hover-link" onclick="selectNavItem('ipl')">Ipl</li>
-                    <li class="hover-link" onclick="selectNavItem('finance')">Finance</li>
-                    <li class="hover-link" onclick="selectNavItem('international')">International</li>
-                    <select class="select-captagory" onchange="changeHandler(this)">
+                    <li class="hover-link" value="ipl">Ipl</li>
+                    <li class="hover-link" value="finance">Finance</li>
+                    <li class="hover-link" value="international">International</li>
+                    <select class="select-captagory">
                         <option value="general" selected>general</option>
                         <option value="science">Science</option>
                         <option value="technology">technology</option>
@@ -34,6 +34,8 @@
                         <option value="health">health</option>
                     </select>
                 </ul>
+
+                <!-- manu icon  -->
                 <i class="fa-solid fa-bars-staggered nav-icon"></i>
             </div>
             
@@ -44,6 +46,9 @@
             <div class="error">Enter Valid Input</div>
         </nav>
         
+
+
+        <!-- hamburger html  -->
         <div class="manu-icon">
             <li onclick="selectNavItem('ipl')">Ipl </li>
             <li onclick="selectNavItem('finance')">Finance</li>
@@ -73,7 +78,6 @@
     
     <!-- loader  -->
     <div class="wrapper">
-        
         <div class="loading">
             <span></span>
             <span></span>
@@ -109,7 +113,7 @@
 
     
     
-    <script src="./script.js" ></script>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>
