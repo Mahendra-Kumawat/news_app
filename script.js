@@ -144,14 +144,20 @@ function searchQueryHandler(index) {
   console.log(index);
   if (!Number(value) && value) {
     fetchData(value);
-  } else {
+    
+    hamburger_manu.classList.toggle("click_li");
+    console.log("inside search QueryHandler function");
+    hamburger_manu.classList.remove("slider");
+
+
+  } 
+  
+  else
+  
+  {
     input_Error.style.display = "block";
     show_error.style.display = "block";
   }
-
-  hamburger_manu.classList.toggle("click_li");
-  console.log("inside search QueryHandler function");
-  hamburger_manu.classList.remove("slider");
 }
 
 // manu icon div

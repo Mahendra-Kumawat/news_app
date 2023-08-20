@@ -28,7 +28,7 @@ body {
     --accent-color-dark: #1d69a3;
 }
 
-p{
+p {
     color: var(--secondary-text-color);
     line-height: 1.5rem;
     font-family: 'Roboto', sans-serif;
@@ -45,7 +45,7 @@ ul {
 
 
 /* select navItem class */
-.active{
+.active {
     color: green;
     text-decoration: underline;
 }
@@ -118,7 +118,7 @@ ul {
 
 
 /* category */
-.select-captagory{
+.select-captagory {
     border: none;
     padding: 10px 10px;
     font-weight: 600;
@@ -128,13 +128,13 @@ ul {
     cursor: pointer;
 }
 
-.select-captagory option{
+.select-captagory option {
     padding: 10px 10px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.select-captagory option:hover{
+.select-captagory option:hover {
     background-color: darkslategrey;
     color: white;
 }
@@ -161,7 +161,7 @@ ul {
     border: 2px solid var(--accent-color);
 }
 
-.search-input::placeholder{
+.search-input::placeholder {
     font-size: 16px;
 }
 
@@ -229,8 +229,8 @@ main {
 
 .error {
     position: absolute;
-    top: 55px;
-    right: 167px;
+    top: 59px;
+    right: 197px;
     display: none;
     font-size: 15px;
     font-weight: 800;
@@ -250,7 +250,7 @@ main {
     transform: translate(-50%, 0);
 }
 
-.not-found p{
+.not-found p {
     line-height: normal;
     text-align: center;
 }
@@ -270,12 +270,12 @@ main {
     position: absolute;
     top: 80px;
     width: 0%;
-    height: 80vh;
-    background-color: rgba(128, 128, 128,1);
+    min-height: 100vh;
+    background-color: rgba(128, 128, 128, 1);
     right: -100px;
     display: flex;
     /* gap: 20px; */
-    padding: 15px 40px; 
+    padding: 15px 40px;
     flex-direction: column;
     justify-content: start;
     list-style: none;
@@ -283,17 +283,18 @@ main {
     z-index: 98;
 }
 
-.manu-icon li{
+.manu-icon li {
     padding: 10px;
     border-radius: 9px;
     font-weight: 600;
     cursor: pointer;
 }
-.manu-icon li:hover{
-    background-color: rgb(105, 105, 105,1);
+
+.manu-icon li:hover {
+    background-color: rgb(105, 105, 105, 1);
 }
 
-.manu-icon .hide-manu-bar{
+.manu-icon .hide-manu-bar {
     height: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -301,10 +302,10 @@ main {
     margin-bottom: 20px;
 }
 
-.manu-icon .show-error{
+.manu-icon .show-error {
     position: relative;
-    bottom: 10px;
-    left: 6px;
+    bottom: 4px;
+    left: 130px;
     display: none;
     color: red;
     font-weight: 700;
@@ -314,19 +315,19 @@ main {
 
 
 /* slider utility class */
-.slider{
-   width: 100%;
-   right: 0;
+.slider {
+    width: 100%;
+    right: 0;
 }
 
 
-.button_slider{
+.button_slider {
     width: 0px;
     right: -30px;
 }
 
 
-.click_li{
+.click_li {
     width: 0%;
     right: -100px;
 }
