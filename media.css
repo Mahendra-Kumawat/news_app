@@ -12,6 +12,12 @@
     .error{
         display: none !important;
     }
+    .header{
+        height: 60px;
+    }
+    .manu-icon{
+        top: 60px;
+    }
 }
 
 @media screen and (min-width:880px) {
