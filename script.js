@@ -25,7 +25,7 @@ const searchButton = document.querySelectorAll(".search-button");
 // error show
 const input_Error = document.querySelector(".error");
 
-window.addEventListener("load", fetchData("general"));
+window.addEventListener("load", fetchData("ipl"));
 
 async function fetchData(query) {
   notFound.style.display = "none";
@@ -93,25 +93,29 @@ function fillCardData(cardClone, article) {
   });
 }
 
-
 // handle navigation for fetching data
-const navigationItem = document.querySelectorAll(".nav-item li")
+const navigationItem = document.querySelectorAll(".nav-item li");
+
+// current active Item 
+const currentActive = document.getElementsByClassName("active");
 
 navigationItem.forEach((navItem) => {
-  navItem.addEventListener('click' , (event) => {
-    let navValue = event.target.textContent.toLowerCase()
+  navItem.addEventListener("click", function () {
+    let navValue = navItem.textContent.toLowerCase();
+    
+    // to show the current highlighted navItem  -> first way 
 
-    console.log(navValue);
-    if (navValue){
-      fetchData(navValue)
+    navItem.className  = navItem.className.replace(" active", "");
+    currentActive[0].className = currentActive[0].className.replace(" active","");
+    this.className += " active";
+    
+
+    // fetch data for navItem 
+    if (navValue) {
+      fetchData(navValue);
     }
-  })
-})
-
-
-
-
-
+  });
+});
 
 // error show container
 const show_error = document.querySelector(".show-error");
@@ -153,17 +157,31 @@ function searchQueryHandler(index) {
 // manu icon div
 const hamburger_manu = document.querySelector(".manu-icon");
 
-// manu icon
+// hamburger manu list 
+const hamburger_manu_li = document.querySelectorAll(".manu-icon li");
+
+// fetch Data when click the hamburger_manu_li
+
+hamburger_manu_li.forEach((li) => {
+    li.addEventListener("click" , () => {
+      let listValue = li.textContent.toLowerCase()
+      console.log(listValue)
+      if (listValue) {
+        fetchData(listValue);
+      }
+    })
+})
+
+
+
+
+//nav icon
 const manu_icon = document.querySelector(".nav-icon");
 
 manu_icon.addEventListener("click", () => {
   hamburger_manu.classList.toggle("slider");
   hamburger_manu.classList.remove("click_li");
 });
-
-
-
-
 
 const hamburger_manu_para = document.querySelectorAll(".manu-icon li");
 hamburger_manu_para.forEach((li) => {
@@ -173,14 +191,11 @@ hamburger_manu_para.forEach((li) => {
   });
 });
 
-
-
-
-
-// category wise data 
+// category wise data
 
 const selectCategory = document.querySelector(".select-captagory");
 selectCategory.addEventListener("change", (event) => {
+  
   let categoryValue = event.target.value;
   if (categoryValue) {
     fetchData(categoryValue);

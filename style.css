@@ -42,6 +42,20 @@ ul {
     list-style: none;
 }
 
+
+
+/* select navItem class */
+.active{
+    color: green;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 /* utility classes  */
 .flex {
     display: flex;
@@ -255,7 +269,7 @@ main {
     position: absolute;
     top: 80px;
     width: 0%;
-    height: 100vh;
+    height: 80vh;
     background-color: rgba(128, 128, 128,1);
     right: -100px;
     display: flex;
