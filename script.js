@@ -1,6 +1,7 @@
 const apiKey = "a2c97c2f0b08416487389120f9fbc035";
 const baseUrl = "https://newsapi.org/v2/everything?q=";
 
+
 // loader
 const loading = document.querySelector(".wrapper");
 
